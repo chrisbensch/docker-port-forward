@@ -1,0 +1,12 @@
+---
+
+services:
+  port_forwarder:
+    image: chrisbensch/docker-port-forward
+    network_mode: "host"
+    environment:
+      - SOURCE_IP=127.0.0.1
+      - SOURCE_PORT=4345
+      - DEST_IP=10.10.12.18
+      - DEST_PORT=4345
+    restart: always
